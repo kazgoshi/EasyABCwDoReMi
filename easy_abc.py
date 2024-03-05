@@ -32,6 +32,184 @@ program_name = 'EasyABC ' + program_version
 #     print('faulthandler not installed. Try: pip install faulthandler')
 #     pass
 
+################## doremi
+
+
+
+abcfield = "ABCDFGHIKLMmNOPQRrSsTUVWXZ"
+abcchar = "ABCDEFGabcdefg"
+abc = "CDEFGABcdefgab"
+doremi = [u"ど",u"レ",u"ミ",u"ファ",u"ソ",u"ラ",u"シ",u"ド",u"れ",u"み",u"ふぁ",u"そ",u"ら",u"し"]
+abcU = [u"ｃ",u"Ｄ",u"Ｅ",u"Ｆ",u"Ｇ",u"Ａ",u"Ｂ",u"Ｃ",u"ｄ",u"ｅ",u"ｆ",u"ｇ",u"ａ",u"ｂ"]
+
+#1文字　ドレミを作成        
+def charW(str):
+    ret = "w:"
+    skip = False
+    skip2 = False
+    skip3 = False
+    for i in range(len(str)):
+        c = str[i]
+        c2 = ""
+        if i+ 1 < len(str):
+            c2 = str[i+1]
+        if c == '"':
+            skip = not skip        
+        if c == '{':
+            skip2 = True
+        if c == '}':
+            skip2 = False
+        if c == '[' and c2 == 'P':
+            skip3 = True
+        if c == '[' and c2 != 'P' and c2 in abc :
+            ret += doremi[abc.index(c2)]+" "
+            skip3 = True
+        if c == ']':
+            skip3 = False
+        if not skip and not skip2 and not skip3 and c in abc:
+            #print(doremi[abc.index(c)]+" "+c+" ")
+            ret += doremi[abc.index(c)]+" "
+    # for c in str:
+    #     if c == '"':
+    #         skip = not skip        
+    #     if c == '{':
+    #         skip2 = True
+    #     if c == '}':
+    #         skip2 = False
+    #     if c == '[':
+    #         skip3 = True
+    #     if c == ']':
+    #         skip3 = False
+    #     if not skip and not skip2 and not skip3 and c in abc:
+    #         #print(doremi[abc.index(c)]+" "+c+" ")
+    #         ret += doremi[abc.index(c)]+" "
+    return ret
+        
+
+    
+#１行　ドレミを作成
+def lineW(line):
+    if len(line)>=2 and line[1]==":":
+        if line[0] in abcfield:
+            #print("abcfield "+line[0]+":")
+            return ""
+        else:
+            return charW(line)
+    else:
+        return charW(line)
+
+#1文字　abcを作成        
+def charWA(str):
+    ret = "w:"
+    skip = False
+    skip2 = False
+    skip3 = False
+    for i in range(len(str)):
+        c = str[i]
+        c2 = ""
+        if i+ 1 < len(str):
+            c2 = str[i+1]
+        if c == '"':
+            skip = not skip        
+        if c == '{':
+            skip2 = True
+        if c == '}':
+            skip2 = False
+        if c == '[' and c2 == 'P':
+            skip3 = True
+        if c == '[' and c2 != 'P' and c2 in abc :
+            ret += abcU[abc.index(c2)]+" "
+            skip3 = True
+        if c == ']':
+            skip3 = False
+        if not skip and not skip2 and not skip3 and c in abc:
+            #print(doremi[abc.index(c)]+" "+c+" ")
+            ret += abcU[abc.index(c)]+" "
+    return ret
+        
+
+    
+#１行　abcを作成
+def lineWA(line):
+    if len(line)>=2 and line[1]==":":
+        if line[0] in abcfield:
+            #print("abcfield "+line[0]+":")
+            return ""
+        else:
+            return charWA(line)
+    else:
+        return charWA(line)
+
+# ドレミを追加
+def insertW(data):
+    vocalabove = "%%vocal above"
+    outdata = "I:abc-charset utf-8\n"+vocalabove+"\n"#""
+        
+    for line in data.replace("\r","").split("\n"):
+        if len(line)>=len(vocalabove) and line.strip("\n")==vocalabove:#vocal aboveはとばす
+            continue
+        if len(line)>=2 and line[0]=="w" and line[1]==":" : #古いwはとばす
+            continue
+        if len(line)>=2 and line[0]=="I" and line[1]==":" : #古いIはとばす
+            continue
+        #print(line)
+        outdata += line+"\n"
+        if len(line)>=2 and line[0]=="%" and line[1]=="%" : #%%はとばす
+            continue
+        # ドレミを追加
+        if len(line)>0 :
+            w = lineW(line)
+            if w != "" :
+                #print(w)
+                outdata += w+"\n"
+    return outdata.rstrip("\n")
+# abcを追加
+def insertWA(data):
+    vocalabove = "%%vocal above"
+    outdata = "I:abc-charset utf-8\n"+vocalabove+"\n"#""
+        
+    for line in data.replace("\r","").split("\n"):
+        if len(line)>=len(vocalabove) and line.strip("\n")==vocalabove:#vocal aboveはとばす
+            continue
+        if len(line)>=2 and line[0]=="w" and line[1]==":" : #古いwはとばす
+            continue
+        if len(line)>=2 and line[0]=="I" and line[1]==":" : #古いIはとばす
+            continue
+        #print(line)
+        outdata += line+"\n"
+        if len(line)>=2 and line[0]=="%" and line[1]=="%" : #%%はとばす
+            continue
+        # abcを追加
+        if len(line)>0 :
+            w = lineWA(line)
+            if w != "" :
+                #print(w)
+                outdata += w+"\n"
+    return outdata.rstrip("\n")
+# ドレミを削除
+def removeW(data):
+    vocalabove = "%%vocal above"
+    iabc = "I:abc-charset utf-8\n"#""
+    outdata =""
+    for line in data.replace("\r","").split("\n"):
+        if len(line)>=len(vocalabove) and line.strip("\n")==vocalabove:#vocal aboveはとばす
+            continue
+        if len(line)>=len(iabc) and line.strip("\n")==iabc:#iabcはとばす
+            continue
+        if len(line)>=2 and line[0]=="w" and line[1]==":" : #古いwはとばす
+            continue
+        if len(line)>=2 and line[0]=="I" and line[1]==":" : #古いIはとばす
+            continue
+        #print(line)
+        outdata += line+"\n"
+        if len(line)>=2 and line[0]=="%" and line[1]=="%" : #%%はとばす
+            continue
+    return outdata.rstrip("\n")
+
+
+
+################## doremi
+
 import sys
 
 PY3 = sys.version_info >= (3,0,0)
@@ -6268,7 +6446,15 @@ class MainFrame(wx.Frame):
                 (_('&View incipits...'), '', self.OnViewIncipits),
                 (),
                 (_('&Renumber X: fields...'), '', self.OnRenumberTunes),
-                (_('&Sort tunes...'), '', self.OnSortTunes)]),
+                ############# DoReMi
+                #(_('&Sort tunes...'), '', self.OnSortTunes)]),
+                (_('&Sort tunes...'), '', self.OnSortTunes),
+                (),
+                (_('Insert DoReMi'), '', self.OnInsertDoReMi),
+                (_('Insert ABC'), '', self.OnInsertABC),
+                (_('Remove DoReMi/ABC'), '', self.OnRemove)
+                ]), 
+                ############# DoReMi                
             (_("&View")     , view_menu),
             (_("&Internals"), [ #p09 [SS] 2014-10-22
                 (_("Messages"), _("Show warnings and errors"), self.OnShowMessages),
@@ -6379,6 +6565,48 @@ class MainFrame(wx.Frame):
     def OnDelete(self, evt):    self.do_command(stc.STC_CMD_CLEAR)
     def OnSelectAll(self, evt): self.do_command(stc.STC_CMD_SELECTALL)
 
+
+    ############### DoReMi
+    def OnInsertDoReMi(self,evt):
+        #print("IN")
+        try:
+            self.editor.BeginUndoAction()
+            text = self.editor.GetText()
+            text = insertW(text)
+            self.editor.SetText(text.replace(self.find_data.GetFindString(), self.find_data.GetReplaceString()))
+            self.editor.SetSelection(0, 0)
+            self.editor.GotoPos(0)
+        finally:
+            self.editor.EndUndoAction()
+        self.refresh_tunes()
+
+    def OnInsertABC(self,evt):
+        #print("IN")
+        try:
+            self.editor.BeginUndoAction()
+            text = self.editor.GetText()
+            text = insertWA(text)
+            self.editor.SetText(text.replace(self.find_data.GetFindString(), self.find_data.GetReplaceString()))
+            self.editor.SetSelection(0, 0)
+            self.editor.GotoPos(0)
+        finally:
+            self.editor.EndUndoAction()
+        self.refresh_tunes()
+
+    def OnRemove(self,evt):
+        #print("RM")
+        try:
+            self.editor.BeginUndoAction()
+            text = self.editor.GetText()
+            text = removeW(text)
+            self.editor.SetText(text.replace(self.find_data.GetFindString(), self.find_data.GetReplaceString()))
+            self.editor.SetSelection(0, 0)
+            self.editor.GotoPos(0)
+        finally:
+            self.editor.EndUndoAction()
+        self.refresh_tunes()
+
+    ############### DoReMi
     def OnFind(self, evt):
         self.close_existing_find_and_replace_dialogs()
         self.find_dialog = wx.FindReplaceDialog(self, self.find_data, _("Find"))

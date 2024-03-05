@@ -9,12 +9,12 @@
 ; Seymour Shlien
 
 #define MyAppName "EasyABC"
-#define MyAppVersion "1.3.8.6"
+#define MyAppVersion "1.3.8.7"
 #define MyAppPublisher "Seymour Shlien"
 #define MyAppURL "ifdo.ca/~seymour/easy/"
-#define MyAppExeName "easy_abc.exe"
+#define MyAppExeName "easy_abc.exe"     
 
-#define MyBuildFolder "build\exe.win32-3.8"
+#define MyBuildFolder "build\exe.win-amd64-3.9"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -31,7 +31,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={commonpf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 LicenseFile={#MyBuildFolder}\gpl-license.txt
-OutputBaseFilename=EasyABC-{#MyAppVersion}
+OutputBaseFilename=EasyABCwDoReMi-2024-0317-{#MyAppVersion}
 Compression=lzma
 SolidCompression=yes
 UninstallDisplayIcon={app}\{#MyAppExeName}
@@ -59,7 +59,7 @@ Source: "{#MyBuildFolder}\easy_abc.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyBuildFolder}\gpl-license.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyBuildFolder}\reference.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyBuildFolder}\python3.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyBuildFolder}\python38.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyBuildFolder}\python39.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyBuildFolder}\VCRUNTIME140.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyBuildFolder}\lib\*"; DestDir: "{app}\lib"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#MyBuildFolder}\bin\*"; DestDir: "{app}\bin\"; Flags: ignoreversion recursesubdirs createallsubdirs
