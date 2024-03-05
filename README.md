@@ -5,7 +5,7 @@
 ![DoReMi](doremi.png "EasyABC")
 
 
-"""
+'''
 python-3.9.13-amd64.exe
 
 仮想環境作成
@@ -29,8 +29,7 @@ py -3.9 easy_abc.py
 binに必要なファイルをコピー
 
 build
-
-"""
+'''
 
 
 ## Links
