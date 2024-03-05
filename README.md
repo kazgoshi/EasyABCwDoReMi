@@ -1,5 +1,6 @@
 歌詞のところにドレミを追記する機能を追加
 
+Tool(道具)のInsert DoReMiでドレミを追加
 
 
 ![DoReMi](doremi.png "EasyABC")
