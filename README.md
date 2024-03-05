@@ -1,3 +1,8 @@
+![DoReMi](doremi.png "EasyABC")
+
+
+
+
 ![EasyABC logo](img/abclogo.png "EasyABC")
 
 # EasyABC
