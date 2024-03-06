@@ -5,7 +5,7 @@ Tool(道具)のInsert DoReMiでドレミを追加
 
 ![DoReMi](doremi.png "EasyABC")
 
-
+実行方法
 ```
 python-3.9.13-amd64.exe
 
@@ -35,5 +35,17 @@ build
 
 ## Links
 
-- [EasyABC](https://github.com/jwdj/EasyABC)
+- [EasyABC https://github.com/jwdj/EasyABC ](https://github.com/jwdj/EasyABC)
 
+- [EasyABC https://sourceforge.net/projects/easyabc/](https://sourceforge.net/projects/easyabc/)
+
+- [abcmidi https://github.com/sshlien/abcmidi](https://github.com/sshlien/abcmidi)
+
+- [abcmidi https://ifdo.ca/~seymour/runabc/top.html](https://ifdo.ca/~seymour/runabc/top.html)
+
+- [abcmidi https://ifdo.ca/~seymour/runabc/abcMIDI-2024.03.05.zip](https://ifdo.ca/~seymour/runabc/abcMIDI-2024.03.05.zip)
+  
+- [FluidSynth https://github.com/FluidSynth/fluidsynth](https://github.com/FluidSynth/fluidsynth)
+
+- [FluidSynth https://github.com/FluidSynth/fluidsynth/releases/download/v2.3.4/fluidsynth-2.3.4-win10-x64.zip](https://github.com/FluidSynth/fluidsynth/releases/download/v2.3.4/fluidsynth-2.3.4-win10-x64.zip)
+- 
