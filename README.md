@@ -43,7 +43,7 @@ outputフォルダにインストーラができる
 ```
 
 
-## Links(Binary Files)
+## Links(ソースからの実行に必要なもの)
 - [abcmidi_win32_mingw64.zip https://ifdo.ca/~seymour/runabc/abcmidi_win32_mingw64.zip](https://ifdo.ca/~seymour/runabc/abcmidi_win32_mingw64.zip)
 
 - [nwc2xml-win-1.5.0.5.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/nwc2xml/nwc2xml-win-1.5.0.5.zip](https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/nwc2xml/nwc2xml-win-1.5.0.5.zip)
