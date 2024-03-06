@@ -31,7 +31,7 @@ py -3.9 -m pip install cx-Freeze
 実行
 py -3.9 easy_abc.py
 
-binにabcmidiとFluidSynthをコピー
+binにabcmidi, nwc2xml, zlib, FluidSynthをコピー
  abcmidi_win32_mingw64.zip の *.exe を binにコピー
  nwc2xml-win-1.5.0.5.zip の nwc2xml.exe を binにコピー
  zlib123dllx64.zip の dll_x64の中の zlibwapi.dll を binにコピー
