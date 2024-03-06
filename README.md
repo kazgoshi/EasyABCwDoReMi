@@ -9,9 +9,9 @@ Tool(道具)のInsert DoReMiでドレミを追加
 
 [Windows11 Installer](https://github.com/kazgoshi/EasyABCwDoReMi/releases/download/v1.0.0/EasyABC-1.3.8.7-wDoReMi-2024-0317-v1.0.0.exe)
 
-実行方法
+ソースからの実行方法
 ```
-python-3.9.13-amd64.exe
+python-3.9.13-amd64.exe をインストール
 
 仮想環境作成
 py -3.9 -m venv easyabc
@@ -39,6 +39,7 @@ binにabcmidi, nwc2xml, zlib, FluidSynthをコピー
  fluidsynth-2.3.4-win10-x64.zip のbinの中の*.dll を binの中のFluidSynthにコピー
 
 build
+outputフォルダにインストーラができる
 ```
 
 
