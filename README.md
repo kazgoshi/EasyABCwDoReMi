@@ -27,7 +27,7 @@ py -3.9 -m pip install cx-Freeze
 実行
 py -3.9 easy_abc.py
 
-binに必要なファイルをコピー
+binにabcmidiとFluidSynthをコピー
 
 build
 ```
