@@ -1,6 +1,7 @@
 [https://github.com/kazgoshi/EasyABCwDoReMi](https://github.com/kazgoshi/EasyABCwDoReMi)
 
-[EasyABC](EasyABC https://github.com/jwdj/EasyABC)の歌詞のところ(w: 属性)にドレミを記入する機能を追加
+[EasyABC](https://github.com/jwdj/EasyABC) 
+の歌詞のところ(w: 属性)にドレミを記入する機能を追加
 
 Tool(道具)のInsert DoReMiでドレミを追加
 
