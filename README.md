@@ -5,6 +5,8 @@ Tool(道具)のInsert DoReMiでドレミを追加
 
 ![DoReMi](doremi.png "EasyABC")
 
+[Windows11 Installer](https://github.com/kazgoshi/EasyABCwDoReMi/releases/download/v1.0.0/EasyABC-1.3.8.7-wDoReMi-2024-0317-v1.0.0.exe)
+
 実行方法
 ```
 python-3.9.13-amd64.exe
