@@ -1,4 +1,4 @@
-歌詞のところにドレミを追記する機能を追加
+歌詞のところ(w: 属性)にドレミを記入する機能を追加
 
 Tool(道具)のInsert DoReMiでドレミを追加
 
@@ -48,4 +48,4 @@ build
 - [FluidSynth https://github.com/FluidSynth/fluidsynth](https://github.com/FluidSynth/fluidsynth)
 
 - [FluidSynth https://github.com/FluidSynth/fluidsynth/releases/download/v2.3.4/fluidsynth-2.3.4-win10-x64.zip](https://github.com/FluidSynth/fluidsynth/releases/download/v2.3.4/fluidsynth-2.3.4-win10-x64.zip)
-- 
+  
