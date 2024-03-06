@@ -43,7 +43,7 @@ build
 
 - [abcmidi https://ifdo.ca/~seymour/runabc/top.html](https://ifdo.ca/~seymour/runabc/top.html)
 
-- [abcmidi https://ifdo.ca/~seymour/runabc/abcMIDI-2024.03.05.zip](https://ifdo.ca/~seymour/runabc/abcMIDI-2024.03.05.zip)
+- [abcmidi https://ifdo.ca/~seymour/runabc/abcmidi_win32_mingw64.zip](https://ifdo.ca/~seymour/runabc/abcmidi_win32_mingw64.zip)
   
 - [FluidSynth https://github.com/FluidSynth/fluidsynth](https://github.com/FluidSynth/fluidsynth)
 
