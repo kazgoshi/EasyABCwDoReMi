@@ -38,8 +38,16 @@ build
 ```
 
 
-## Links
+## Links(Binary Files)
+- [abcmidi_win32_mingw64.zip https://ifdo.ca/~seymour/runabc/abcmidi_win32_mingw64.zip](https://ifdo.ca/~seymour/runabc/abcmidi_win32_mingw64.zip)
 
+- [nwc2xml-win-1.5.0.5.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/nwc2xml/nwc2xml-win-1.5.0.5.zip](https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/nwc2xml/nwc2xml-win-1.5.0.5.zip)
+
+- [zlib123dllx64.zip http://www.winimage.com/zLibDll/zlib123dll.zip](http://www.winimage.com/zLibDll/zlib123dll.zip)
+
+- [fluidsynth-2.3.4-win10-x64.zip https://github.com/FluidSynth/fluidsynth/releases/download/v2.3.4/fluidsynth-2.3.4-win10-x64.zip](https://github.com/FluidSynth/fluidsynth/releases/download/v2.3.4/fluidsynth-2.3.4-win10-x64.zip)
+
+## Links
 - [EasyABC https://github.com/jwdj/EasyABC ](https://github.com/jwdj/EasyABC)
 
 - [EasyABC https://sourceforge.net/projects/easyabc/](https://sourceforge.net/projects/easyabc/)
@@ -48,9 +56,10 @@ build
 
 - [abcmidi https://ifdo.ca/~seymour/runabc/top.html](https://ifdo.ca/~seymour/runabc/top.html)
 
-- [abcmidi https://ifdo.ca/~seymour/runabc/abcmidi_win32_mingw64.zip](https://ifdo.ca/~seymour/runabc/abcmidi_win32_mingw64.zip)
-  
+- [nwc2xml https://github.com/mzealey/nwc2xml](https://github.com/mzealey/nwc2xml)
+
+- [zlib https://www.winimage.com/zLibDll/](https://www.winimage.com/zLibDll/)
+
 - [FluidSynth https://github.com/FluidSynth/fluidsynth](https://github.com/FluidSynth/fluidsynth)
 
-- [FluidSynth https://github.com/FluidSynth/fluidsynth/releases/download/v2.3.4/fluidsynth-2.3.4-win10-x64.zip](https://github.com/FluidSynth/fluidsynth/releases/download/v2.3.4/fluidsynth-2.3.4-win10-x64.zip)
   
